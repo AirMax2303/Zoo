@@ -34,10 +34,10 @@ fun AnimalsScreen(
 ) {
     val showDetail = remember { mutableStateOf(false) }
     val tabIndex = remember { mutableStateOf(0) }
-    val animalindex = remember { mutableStateOf(0) }
+    val animaSave = remember { mutableStateOf(repo.animalsList[0][0]) }
 
     if (showDetail.value)
-        DetailScreen(repo.animalsList[tabIndex.value][animalindex.value]) {
+        DetailScreen(animaSave.value) {
             showDetail.value = it
         }
 
@@ -58,7 +58,7 @@ fun AnimalsScreen(
                     animal = animal,
                     onClick = {
                         showDetail.value = true
-                        animalindex.value = index
+                        animaSave.value = animal
                     }
                 )
             }
