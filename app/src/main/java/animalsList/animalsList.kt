@@ -1,10 +1,11 @@
 package animalsList
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.*
+//import androidx.compose.foundation.gestures.ModifierLocalScrollableContainerProvider.value
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.ui.Alignment
@@ -28,6 +29,7 @@ import model.*
 
 //import androidx.compose.ui.tooling.data.EmptyGroup.name
 
+@SuppressLint("SuspiciousIndentation")
 @Composable
 fun AnimalsScreen(
     repo: Repo
@@ -36,10 +38,14 @@ fun AnimalsScreen(
     val tabIndex = remember { mutableStateOf(0) }
     val animaSave = remember { mutableStateOf(repo.animalsList[0][0]) }
 
-    if (showDetail.value)
-        DetailScreen(animaSave.value) {
-            showDetail.value = it
-        }
+        if (showDetail.value)
+        DetailScreen(
+            animal = animaSave.value,
+            setShowDetail = {value -> showDetail.value = value},
+        )
+//        DetailScreen(animaSave.value) {
+//            showDetail.value = it
+//        }
 
     Column {
 
@@ -53,7 +59,7 @@ fun AnimalsScreen(
             }
         }
         LazyColumn {
-            itemsIndexed(repo.animalsList[tabIndex.value]) { index, animal ->
+            items(repo.animalsList[tabIndex.value]) { animal ->
                 AnimalListItem(
                     animal = animal,
                     onClick = {
