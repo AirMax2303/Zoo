@@ -87,10 +87,10 @@ fun AnimalListItem(
                     text = animal.name,
                     style = MaterialTheme.typography.h5
                 )
-                Text(
-                    text = animal.description,
-                    style = MaterialTheme.typography.subtitle2
-                )
+//                Text(
+//                    text = animal.description,
+//                    style = MaterialTheme.typography.subtitle2
+//                )
             }
             Spacer(Modifier.width(16.dp))
             Box(

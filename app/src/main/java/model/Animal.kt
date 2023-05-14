@@ -12,86 +12,109 @@ data class Animal(
 
 class Repo(
 
-    val tabs: List<String> = listOf("Home", "About", "Settings"),
+    val tabs: List<String> = listOf("Хищные", "Птицы", "Насекомые"),
 
     val animalList01: List<Animal> = listOf(
         Animal(
-            name = "Жираф", image = R.drawable.giraffe, description = "Парнокопытное млекопитающее относится к семейству жирафовых. Животное является самым высоким на планете."
-        ), Animal(
-            name = "Зебра", image = R.drawable.zebra, description = "Непарнокопытные млекопитающие относятся к семейству лошадиных. Длина тела зебры приблизительно 2 м, вес – максимум 360 кг."
-        ), Animal(
-            name = "name03", image = R.drawable.image2, description = "description"
-        ), Animal(
-            name = "name04", image = R.drawable.image3, description = "description"
-        ), Animal(
-            name = "name05", image = R.drawable.image4, description = "description"
-        ), Animal(
-            name = "name06", image = R.drawable.image5, description = "description"
-        ), Animal(
-            name = "name07", image = R.drawable.image6, description = "description"
-        ), Animal(
-            name = "name08", image = R.drawable.image7, description = "description"
-        ), Animal(
-            name = "name09", image = R.drawable.image8, description = "description"
-        ), Animal(
-            name = "name10", image = R.drawable.image9, description = "description"
-        ), Animal(
-            name = "name01", image = R.drawable.image10, description = "description"
-        )
+            name = "Лев",
+            image = R.drawable.image3,
+            description = "Один из самых крупных представителей семейства кошачьих. Масса самца 180-227 кг. Резко выражен половой диморфизм. Самец имеет длинную гриву, покрывающую шею, плечи и грудь."
+        ),
+        Animal(
+            name = "Aмурский тигр",
+            image = R.drawable.image3,
+            description = "Амурский тигр — властелин огромных территорий, площадь которых у самки составляет 300—500 км², а у самца — 600—800 км². Если в пределах своих владений корма достаточно, то тигр не покидает свою территорию."
+        ),
+        Animal(
+            name = "Леопард",
+            image = R.drawable.image3,
+            description = "Обитают эти хищные кошки в тропиках и субтропиках. Леопарды широко распространены на территории Африки и Азии. В России этот хищник встречается довольно редко, в основном в Закавказье и на Дальнем Востоке."
+        ),
+        Animal(
+            name = "Пума",
+            image = R.drawable.image3,
+            description = "Пу́ма или горный лев, кугуар – самый крупный представитель рода пум. Длина тела животного составляет 100—180 см, при длине хвоста 60—75 см. Обитает в Северной и Южной Америке. Ареал пумы простирается от Канады и США на юг, охватывая почти всю Южную Америку вплоть до Патагонии."
+        ),
+        Animal(
+            name = "Ягуар",
+            image = R.drawable.image3,
+            description = "Один из крупнейших хищников Северной и Южной Америки. Его тело длиной от 112 до 182 см, хвост вырастает до 75 см. Весит в среднем 60 - 90 кг.\n" +
+                    "Охотничья территория одного зверя напоминает треугольник, площадью примерно до 170 кв. км. Ягуар охотится не сразу по всей своей территории, а на ее части. Сначала несколько дней в одной, а потом кочует в другую."
+        ),
+        Animal(
+            name = "Рысь сибирская",
+            image = R.drawable.image3,
+            description = "Рыси – это единственный вид кошек, которые обитают в северных районах нашей планеты. В России сибирская рысь встречается в районе Сахалина и Камчатки, но основным ареалом обитания считается сибирская тайга."
+
+        ),
+        Animal(
+            name = "Бурый медведь",
+            image = R.drawable.image3,
+            description = "В Западной Европе разобщённые популяции бурого медведя сохранились на Пиренеях, Альпах и Апеннинах, в России ареал занимает почти всю лесную зону, за исключением её южных районов. Места обитания – леса с буреломом, перемежающиеся болотами, лужайками, водоёмами."
+        ),
     ),
 
     val animalList02: List<Animal> = listOf(
         Animal(
-            name = "02name01", image = R.drawable.dice_1, description = "description"
-        ), Animal(
-            name = "02name02", image = R.drawable.dice_2, description = "description"
-        ), Animal(
-            name = "02name03", image = R.drawable.dice_3, description = "description"
-        ), Animal(
-            name = "02name04", image = R.drawable.dice_4, description = "description"
-        ), Animal(
-            name = "02name05", image = R.drawable.dice_5, description = "description"
-        ), Animal(
-            name = "02name06", image = R.drawable.dice_6, description = "description"
-        ), Animal(
-            name = "02name07", image = R.drawable.image6, description = "description"
-        ), Animal(
-            name = "02name08", image = R.drawable.image7, description = "description"
-        ), Animal(
-            name = "02name09", image = R.drawable.image8, description = "description"
-        ), Animal(
-            name = "02name10", image = R.drawable.image9, description = "description"
-        ), Animal(
-            name = "02name01", image = R.drawable.image10, description = "description"
-        )
+            name = "Огненный гомрай",
+            image = R.drawable.dice_1,
+            description = "Птицы-носороги получили своё название из-за больших длинных клювов, резко загнутых вниз и имеющих у своего основания значительные выросты различной формы. Края клюва с неправильными зазубринами."
+        ),
+        Animal(
+            name = "Белый павлин",
+            image = R.drawable.dice_2,
+            description = "Вариция обыкновенного павлина. Белый павлин — большая и стройная птица. Характерным признаком самца павлина является сильное развитие верхних кроющих перьев, ошибочно принимаемых за хвост. Большой «хвост» на самом деле — перья надхвостья, сам же хвост состоит из невзрачных серых перьев."
+        ),
+        Animal(
+            name = "Ушастая сова",
+            image = R.drawable.dice_3,
+            description = "Отличается от болотной совы большими ушными пучками, состоящими из 6 перьев, более коротким первым маховым пером (короче четвёртого) и окраской. Область её гнездования занимает Европу и северную Азию; зимует — в северной Африке."
+        ),
+        Animal(
+            name = "Филин",
+            image = R.drawable.dice_4,
+            description = "Хищная птица из семейства совиных, один из наиболее крупных представителей отряда совообразных. Наиболее характерные черты включают в себя массивное «бочкообразное» телосложение, рыхлое оперение с преобладанием рыжеватых и охристых оттенков, ярко-оранжевые глаза и пучки удлинённых перьев над ними (так называемые «перьевые уши»)."
+        ),
+        Animal(
+            name = "Серая цапля",
+            image = R.drawable.dice_5,
+            description = "Это длинноногая, длинношеяя птица, серой окраски сверху и белой снизу, с включениями чёрного цвета, с довольно длинным острым клювом. Размеры достаточно большие, вес взрослого самца может достигать 2 кг. Самки несколько меньше самцов."
+        ),
+        Animal(
+            name = "Ястреб-тетеревятник",
+            image = R.drawable.dice_6,
+            description = "Распространён в Европе, Северной Азии, Северной Америке. Довольно крупная птица, самка намного крупнее самца. Длина тела достигает 52-68 см, вес от 0,7 до 1,5 кг. Окраска верхней стороны тела – серовато-бурая (разных оттенков)."
+        ),
     ),
 
     val animalList03: List<Animal> = listOf(
         Animal(
-            name = "03name01", image = R.drawable.image1, description = "description"
+            name = "Большой мучной хрущак",
+            image = R.drawable.image1,
+            description = "Мучные черви — его личиночная форма. Личинка длиной до 2,5 см и более, голая, буровато-жёлтая, цилиндрическая, безглазая, с тремя парами грудных ножек, каждая ножка с коготком."
         ),
         Animal(
-            name = "03name02", image = R.drawable.image1, description = "description"
+            name = "Таракан американский",
+            image = R.drawable.image1,
+            description = "Родом из тропических районов Африки. Длина тела имаго 35—50 мм. Самцы кажутся длиннее самок, поскольку крылья самцов заходят за кончик брюшка на 4—8 мм. Насекомое может летать. Питаются разлагающимся органическим материалом."
         ),
         Animal(
-            name = "03name03", image = R.drawable.image2, description = "description"
+            name = "Таракан мадагаскарский",
+            image = R.drawable.image2,
+            description = "Один из самых больших тараканов в мире: средние размеры самки и самца — 60 и 55 мм соответственно. В некоторых случаях особи достигают 10 сантиметров в длину. Обитает на стволах и ветвях деревьев и кустов. Питаются травянистыми частями растений и фруктами."
         ),
         Animal(
-            name = "03name04", image = R.drawable.image3, description = "description"
+            name = "Таракан пепельный",
+            image = R.drawable.image3,
+            description = "Размеры: самка — 30 мм, самец — 25 мм. Развитие до имагинальной стадии длится до 4 месяцев. Самку от самца можно отличить по размеру брюшка: у самок оно к концу шире, чем у самцов. Питаются фруктами или овощами, из сухих кормов отлично зарекомендовали себя овсяная крупа и гранулированный комбикорм для кроликов на основе травяной муки."
         ),
         Animal(
-            name = "03name05", image = R.drawable.image4, description = "description"
+            name = "Паук-птицеед",
+            image = R.drawable.image4,
+            description = "Взрослые особи характеризуются крупными размерами, в некоторых случаях превышая 27 см в размахе ног. Птицееды населяют все континенты, кроме Антарктиды. Основу рациона пауков-птицеедов составляют насекомые или более мелкие пауки."
         ),
-        Animal(
-            name = "03name06", image = R.drawable.image5, description = "description"
+
         ),
-        Animal(
-            name = "03name07", image = R.drawable.image6, description = "description"
-        ),
-        Animal(
-            name = "03name08", image = R.drawable.image7, description = "description"
-        ),
-    ),
 
     val animalsList: List<List<Animal>> = listOf(animalList01, animalList02, animalList03),
 
